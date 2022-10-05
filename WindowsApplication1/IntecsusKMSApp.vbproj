@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5358766C-5F26-4549-8CE4-B87AA31178D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IntecsusKMSApp.My.MyApplication</StartupObject>
+    <RootNamespace>IntecsusKMSApp</RootNamespace>
+    <AssemblyName>IntecsusKMSApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IntecsusKMSApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IntecsusKMSApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>keys.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Encripcion\HashUtils.vb" />
+    <Compile Include="GUI\AboutForm.Designer.vb">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GenKeyForm.Designer.vb">
+      <DependentUpon>GenKeyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GenKeyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KeyConfForm.Designer.vb">
+      <DependentUpon>KeyConfForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KeyConfForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GetKCVForm.Designer.vb">
+      <DependentUpon>GetKCVForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GetKCVForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadKeyForm.Designer.vb">
+      <DependentUpon>LoadKeyForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoadKeyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ShowComponentForm.Designer.vb">
+      <DependentUpon>ShowComponentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ShowComponentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UserConfForm.Designer.vb">
+      <DependentUpon>UserConfForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserConfForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKCS11\PKCS11Config.vb" />
+    <Compile Include="PKCS11\PKCS11Error.vb" />
+    <Compile Include="PKCS11\Token.vb" />
+    <Compile Include="Llaves\Component.vb" />
+    <Compile Include="Encripcion\DES.vb" />
+    <Compile Include="Encripcion\IEncrypt.vb" />
+    <Compile Include="GUI\LoadComponentForm.Designer.vb">
+      <DependentUpon>LoadComponentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoadComponentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TokenInfoForm.Designer.vb">
+      <DependentUpon>TokenInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TokenInfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainAppForm.Designer.vb">
+      <DependentUpon>MainAppForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainAppForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Encripcion\TDES.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\AboutForm.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GenKeyForm.resx">
+      <DependentUpon>GenKeyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KeyConfForm.resx">
+      <DependentUpon>KeyConfForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadComponentForm.resx">
+      <DependentUpon>LoadComponentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GetKCVForm.resx">
+      <DependentUpon>GetKCVForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoadKeyForm.resx">
+      <DependentUpon>LoadKeyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ShowComponentForm.resx">
+      <DependentUpon>ShowComponentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TokenInfoForm.resx">
+      <DependentUpon>TokenInfoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainAppForm.resx">
+      <DependentUpon>MainAppForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserConfForm.resx">
+      <DependentUpon>UserConfForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="keys.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NShieldKeyLoader\NShieldKeyLoader.vcxproj">
+      <Project>{9fedaba5-e098-4386-8d49-395618f5bf14}</Project>
+      <Name>IntecsusKMSNShield</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
